@@ -1,4 +1,4 @@
-export { default as LpSiderbar } from './lp-siderbar';
-export { default as LpHeader } from './lp-header';
-export { default as LpContent } from './lp-content';
-export { default as LpFooter } from './lp-footer';
+export { default as AntdSiderbar } from './antd-siderbar';
+export { default as AntdHeader } from './antd-header';
+export { default as AntdContent } from './antd-content';
+export { default as AntdFooter } from './antd-footer';

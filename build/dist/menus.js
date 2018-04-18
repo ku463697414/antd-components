@@ -64,7 +64,7 @@ var menuData = [
                 component: dynamicLoad(function () { return import('./pages/search-form'); })
             }
         ]
-    },
+    }
 ];
 function formatter(data, parentPath) {
     if (parentPath === void 0) { parentPath = ''; }
@@ -110,9 +110,7 @@ function dynamicLoad(importComponent) {
         };
         DynamicLoad.prototype.render = function () {
             var C = this.state.component;
-            return C
-                ? React.createElement(C, __assign({}, this.props))
-                : null;
+            return C ? React.createElement(C, __assign({}, this.props)) : null;
         };
         return DynamicLoad;
     }(React.Component));

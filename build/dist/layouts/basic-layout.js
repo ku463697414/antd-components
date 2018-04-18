@@ -22,7 +22,7 @@ import { inject, observer } from 'mobx-react';
 import { Switch, Route } from 'react-router-dom';
 import { Layout, Icon } from 'antd';
 import menus from '../menus';
-import { LpSiderbar, LpHeader, LpContent, LpFooter } from '../components';
+import { AntdSiderbar, AntdHeader, AntdContent, AntdFooter } from '../components';
 var BasicLayout = /** @class */ (function (_super) {
     __extends(BasicLayout, _super);
     function BasicLayout(props) {
@@ -44,14 +44,14 @@ var BasicLayout = /** @class */ (function (_super) {
     };
     BasicLayout.prototype.render = function () {
         return (React.createElement(Layout, null,
-            React.createElement(LpSiderbar, null),
+            React.createElement(AntdSiderbar, null),
             React.createElement(Layout, null,
-                React.createElement(LpHeader, null),
-                React.createElement(LpContent, null,
+                React.createElement(AntdHeader, null),
+                React.createElement(AntdContent, null,
                     React.createElement(Switch, null, menus.map(function (v) {
                         return v.children.map(function (child, i) { return (React.createElement(Route, { key: i, path: child.path, component: child.component, exact: true })); });
                     })),
-                    React.createElement(LpFooter, { links: [
+                    React.createElement(AntdFooter, { links: [
                             {
                                 title: '人脸识别首页',
                                 href: 'http://180.97.70.120:9003/',

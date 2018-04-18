@@ -40,12 +40,13 @@ var AppStore = /** @class */ (function () {
         };
         this.setKeysByPath = function (pathname) {
             menus.forEach(function (parent) {
-                parent.children && parent.children.forEach(function (child) {
-                    if (child.path === pathname) {
-                        _this.selectedKeys = [child.name];
-                        _this.openKeys = [parent.name];
-                    }
-                });
+                parent.children &&
+                    parent.children.forEach(function (child) {
+                        if (child.path === pathname) {
+                            _this.selectedKeys = [child.name];
+                            _this.openKeys = [parent.name];
+                        }
+                    });
             });
         };
         var match = matchMedia('(max-width: 768px)');
