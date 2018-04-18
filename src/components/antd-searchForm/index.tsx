@@ -20,7 +20,7 @@ const style = {
   }
 };
 
-export interface Qs { 
+export interface Qs {
   [key: string]: number | string | string[];
 }
 
