@@ -53,19 +53,19 @@ var BasicLayout = /** @class */ (function (_super) {
                     })),
                     React.createElement(LpFooter, { links: [
                             {
-                                title: '罗盘商旅首页',
-                                href: 'http://www.jiketravel.com',
+                                title: '人脸识别首页',
+                                href: 'http://180.97.70.120:9003/',
                                 target: '_blank'
                             },
                             {
                                 title: 'gitlab',
-                                href: 'http://120.27.146.48:9090/jike/customer-admin',
+                                href: 'https://github.com/ku463697414/antd-components',
                                 target: '_blank'
                             }
                         ], copyright: React.createElement("div", null,
                             "Copyright ",
                             React.createElement(Icon, { type: "copyright" }),
-                            " 2018 \u7F57\u76D8\u5546\u65C5\u6280\u672F\u90E8\u51FA\u54C1") })))));
+                            " 2018 \u4E2D\u56FD\u5236\u9020") })))));
     };
     BasicLayout = __decorate([
         inject('appStore', 'routerStore'),

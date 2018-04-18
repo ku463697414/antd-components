@@ -10,7 +10,7 @@ export interface Props {
     copyright?: JSX.Element;
     className?: string;
 }
-declare class LpFooter extends React.Component<Props> {
+declare class AntdFooter extends React.Component<Props> {
     render(): JSX.Element;
 }
-export default LpFooter;
+export default AntdFooter;

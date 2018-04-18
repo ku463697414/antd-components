@@ -15,7 +15,7 @@ export class AppStore {
   @observable logined = false;
   /** 登录账户 */
   @observable user: User = {
-    name: 'zqgu'
+    name: 'hp'
   };
 
   constructor() {

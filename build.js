@@ -20,16 +20,16 @@ dirs.forEach(dir => {
   isExist && process.execSync(`cp ${src} ${dist}`);
 });
 // 清除不需要的目录
-process.execSync('rm -rf es/lp-header es/lp-siderbar es/lp-content assets/fonts assets/images');
+process.execSync('rm -rf es/Antd-header es/Antd-siderbar es/Antd-content assets/fonts assets/images');
 deleteLines('./es/index.d.ts');
 deleteLines('./es/index.js');
 
 function deleteLines(file) {
   const data = fs.readFileSync(file, 'utf8');
   const lines = data.split('\n').filter(l => {
-    return l !== 'export { default as LpHeader } from \'./lp-header\';'
-      && l !== 'export { default as LpContent } from \'./lp-content\';'
-      && l !== 'export { default as LpSiderbar } from \'./lp-siderbar\';'
+    return l !== 'export { default as AntdHeader } from \'./Antd-header\';'
+      && l !== 'export { default as AntdContent } from \'./Antd-content\';'
+      && l !== 'export { default as AntdSiderbar } from \'./Antd-siderbar\';'
   }).join('\n');
   fs.writeFile(file, lines);
 }

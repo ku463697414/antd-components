@@ -2,46 +2,17 @@ import * as React from 'react';
 
 const menuData: MenuData[] = [
   {
-    name: 'dashboard',
-    icon: 'dashboard', 
-    path: 'dashboard',
-    children: [
-      { name: '分析页', path: 'analysis' },
-      { name: '监控页', path: 'monitor' },
-      { name: '工作台', path: 'workplace' },
-    ]
-  },
-  {
-    name: 'chart',
-    icon: 'dashboard',
-    path: 'chart',
-    children: [
-      { 
-        name: '基础图标', 
-        path: 'basic-charts', 
-        component: dynamicLoad(() => import('./pages/chart')) 
-      }
-    ]
-  },
-  {
-    name: '表单页',
-    icon: 'form', 
+    name: '基本组件',
+    icon: 'form',
     path: 'form',
     children: [
       { 
-        name: '基础表单', 
-        path: 'basic-form', 
-        component: dynamicLoad(() => import('./pages/form/basic-form')) 
-      },
-      { 
-        name: '描述表单', 
-        path: 'description-form', 
-        component: dynamicLoad(() => import('./pages/form/description-form')) 
-      },
-      { name: '分步表单', path: 'step-form' },
-      { name: '高级表单', path: 'advanced-form' }
+        name: '搜索表单', 
+        path: 'search-form', 
+        component: dynamicLoad(() => import('./pages/search-form')) 
+      }
     ]
-  }
+  },
 ];
 
 function formatter(data: MenuData[], parentPath: string = '') {

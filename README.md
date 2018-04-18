@@ -1,25 +1,21 @@
-### antd-pro
+## 提交代码
+`注意:推送至远程仓库时，请先运行yarn tsc编译`
+```
+yarn tsc
+git add
+git commit -m ''
+git push
+```
 
-#### layouts
-- [x] basic-layout 
-- [ ] pageHeader-layout
-- [ ] user-layout
+## 作为第三方包引用
 
-#### components
-- [x] lp-bar
-- [x] lp-chartCard
-- [x] lp-currency
-- [x] lp-description
-- [x] lp-field
-- [x] lp-footer
-- [x] lp-miniBar
-- [x] lp-modalForm
-- [x] lp-percent
-- [x] lp-pie
-- [x] lp-price
-- [x] lp-rangePicker
-- [x] lp-searchForm
-- [x] lp-table
-- [x] lp-tabs
-- [x] lp-trend
-- [x] lp-waterWave
+### 安装包
+```
+yarn add ssh://git@github.com:ku463697414/antd-components.git
+```
+
+### 更新包
+```
+yarn remove antd-components
+yarn add ssh://git@github.com:ku463697414/antd-components.git
+```

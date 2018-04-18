@@ -5,7 +5,7 @@ import { RouterStore, SynchronizedHistory } from 'mobx-react-router';
 import { Layout, Icon } from 'antd';
 
 import menus from '../menus';
-import { LpSiderbar, LpHeader, LpContent, LpFooter } from '../components';
+import { AntdSiderbar, AntdHeader, AntdContent, AntdFooter } from '../components';
 import { AppStore } from '../app.store';
 
 export interface Props extends RouteComponentProps<{}> {
@@ -43,10 +43,10 @@ class BasicLayout extends React.Component<Props> {
   render() {
     return (
       <Layout>
-        <LpSiderbar />
+        <AntdSiderbar />
         <Layout>
-          <LpHeader />
-          <LpContent>
+          <AntdHeader />
+          <AntdContent>
             <Switch>
               {menus.map((v) => {
                 return v.children!.map((child, i) => (
@@ -59,24 +59,24 @@ class BasicLayout extends React.Component<Props> {
                 ));
               })}
             </Switch>
-            <LpFooter
+            <AntdFooter
               links={[
                 {
-                  title: '罗盘商旅首页',
-                  href: 'http://www.jiketravel.com',
+                  title: '人脸识别首页',
+                  href: 'http://180.97.70.120:9003/',
                   target: '_blank'
                 },
                 {
                   title: 'gitlab',
-                  href: 'http://120.27.146.48:9090/jike/customer-admin',
+                  href: 'https://github.com/ku463697414/antd-components',
                   target: '_blank'
                 }
               ]}
               copyright={
-                <div>Copyright <Icon type="copyright" /> 2018 罗盘商旅技术部出品</div>
+                <div>Copyright <Icon type="copyright" /> 2018 中国制造</div>
               }
             />
-          </LpContent>
+          </AntdContent>
         </Layout>
       </Layout>
     );

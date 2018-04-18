@@ -24,7 +24,7 @@ var AppStore = /** @class */ (function () {
         this.logined = false;
         /** 登录账户 */
         this.user = {
-            name: 'zqgu'
+            name: 'hp'
         };
         this.logout = function () {
             _this.logined = false;

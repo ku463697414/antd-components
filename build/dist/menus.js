@@ -54,46 +54,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 import * as React from 'react';
 var menuData = [
     {
-        name: 'dashboard',
-        icon: 'dashboard',
-        path: 'dashboard',
-        children: [
-            { name: '分析页', path: 'analysis' },
-            { name: '监控页', path: 'monitor' },
-            { name: '工作台', path: 'workplace' },
-        ]
-    },
-    {
-        name: 'chart',
-        icon: 'dashboard',
-        path: 'chart',
-        children: [
-            {
-                name: '基础图标',
-                path: 'basic-charts',
-                component: dynamicLoad(function () { return import('./pages/chart'); })
-            }
-        ]
-    },
-    {
-        name: '表单页',
+        name: '基本组件',
         icon: 'form',
         path: 'form',
         children: [
             {
-                name: '基础表单',
-                path: 'basic-form',
-                component: dynamicLoad(function () { return import('./pages/form/basic-form'); })
-            },
-            {
-                name: '描述表单',
-                path: 'description-form',
-                component: dynamicLoad(function () { return import('./pages/form/description-form'); })
-            },
-            { name: '分步表单', path: 'step-form' },
-            { name: '高级表单', path: 'advanced-form' }
+                name: '搜索表单',
+                path: 'search-form',
+                component: dynamicLoad(function () { return import('./pages/search-form'); })
+            }
         ]
-    }
+    },
 ];
 function formatter(data, parentPath) {
     if (parentPath === void 0) { parentPath = ''; }
