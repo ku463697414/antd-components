@@ -27,9 +27,9 @@ deleteLines('./es/index.js');
 function deleteLines(file) {
   const data = fs.readFileSync(file, 'utf8');
   const lines = data.split('\n').filter(l => {
-    return l !== 'export { default as AntdHeader } from \'./Antd-header\';'
-      && l !== 'export { default as AntdContent } from \'./Antd-content\';'
-      && l !== 'export { default as AntdSiderbar } from \'./Antd-siderbar\';'
+    return l !== 'export { default as AntdHeader } from \'./antd-header\';'
+      && l !== 'export { default as AntdContent } from \'./antd-content\';'
+      && l !== 'export { default as AntdSiderbar } from \'./antd-siderbar\';'
   }).join('\n');
   fs.writeFile(file, lines);
 }
