@@ -1,11 +1,16 @@
 import * as React from 'react';
+import { 
+  AntdOriginSearchForm
+} from '../../components';
 
-export interface State {}
-
-class SearchForm extends React.Component {
+class BasicForm extends React.Component {
   render() {
-    return '搜搜表单';
+    return (
+      <div>
+        <AntdOriginSearchForm/>
+      </div>
+    );
   }
 }
 
-export default SearchForm;
+export default BasicForm;
