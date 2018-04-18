@@ -52,7 +52,15 @@ class AntdSiderbar extends React.Component {
     const { collapsed } = this.appStore;
     return nodes.map(node => {
       return (
-        <Menu.SubMenu title={<span><Icon type={node.icon!} />{!collapsed ? node.name : ''}</span>} key={node.name}>
+        <Menu.SubMenu
+          title={
+            <span>
+              <Icon type={node.icon!} />
+              {!collapsed ? node.name : ''}
+            </span>
+          }
+          key={node.name}
+        >
           {node.children!.map(child => (
             <Menu.Item key={child.name}>
               <Link to={child.path!}>{child.name}</Link>
@@ -65,9 +73,11 @@ class AntdSiderbar extends React.Component {
 
   renderSiderbar = () => {
     const { collapsed, toggle, openKeys, selectedKeys } = this.appStore;
-    const menuProps = collapsed ? {} : {
-      openKeys: openKeys.slice(),
-    };
+    const menuProps = collapsed
+      ? {}
+      : {
+          openKeys: openKeys.slice()
+        };
 
     return (
       <Layout.Sider
@@ -97,29 +107,25 @@ class AntdSiderbar extends React.Component {
         </Menu>
       </Layout.Sider>
     );
-  }
+  };
 
   render() {
-    const {
-      isMobile,
-      collapsed,
-      toggle
-    } = this.appStore;
+    const { isMobile, collapsed, toggle } = this.appStore;
 
-    return isMobile
-      ? (
-          <DrawerMenu
-            parent={null}
-            level={null}
-            iconChild={null}
-            open={!collapsed}
-            onMaskClick={() => toggle(true)}
-            width="256px"
-          >
-            {this.renderSiderbar()}
-          </DrawerMenu>
-        )
-      : this.renderSiderbar();
+    return isMobile ? (
+      <DrawerMenu
+        parent={null}
+        level={null}
+        iconChild={null}
+        open={!collapsed}
+        onMaskClick={() => toggle(true)}
+        width="256px"
+      >
+        {this.renderSiderbar()}
+      </DrawerMenu>
+    ) : (
+      this.renderSiderbar()
+    );
   }
 }
 

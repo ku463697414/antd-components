@@ -1,17 +1,10 @@
 import * as React from 'react';
 
-export interface State {
-}
+export interface State {}
 
 class SearchForm extends React.Component {
- 
-
-
   render() {
-    
-    return (
-        '搜搜表单'
-    );
+    return '搜搜表单';
   }
 }
 

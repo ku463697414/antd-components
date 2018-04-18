@@ -6,13 +6,13 @@ const menuData: MenuData[] = [
     icon: 'form',
     path: 'form',
     children: [
-      { 
-        name: '搜索表单', 
-        path: 'search-form', 
-        component: dynamicLoad(() => import('./pages/search-form')) 
+      {
+        name: '搜索表单',
+        path: 'search-form',
+        component: dynamicLoad(() => import('./pages/search-form'))
       }
     ]
-  },
+  }
 ];
 
 function formatter(data: MenuData[], parentPath: string = '') {
@@ -56,9 +56,7 @@ function dynamicLoad(importComponent: any) {
 
     render() {
       const C = this.state.component;
-      return C
-        ? <C {...this.props} />
-        : null;
+      return C ? <C {...this.props} /> : null;
     }
   }
 

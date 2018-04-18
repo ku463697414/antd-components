@@ -24,11 +24,7 @@ class AntdFooter extends React.Component<Props> {
         {links && (
           <div className={styles['links']}>
             {links.map((v, i) => (
-              <a
-                key={i}
-                target={v.target}
-                href={v.href} 
-              >
+              <a key={i} target={v.target} href={v.href}>
                 {v.title}
               </a>
             ))}

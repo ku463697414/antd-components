@@ -14,7 +14,8 @@ export class AppStore {
   /** 登录状态 */
   @observable logined = false;
   /** 登录账户 */
-  @observable user: User = {
+  @observable
+  user: User = {
     name: 'hp'
   };
 
@@ -31,29 +32,30 @@ export class AppStore {
   @action
   setIsMobile = (isMobile: boolean) => {
     this.isMobile = isMobile;
-  }
+  };
 
   @action
   toggle = (collapsed: boolean) => {
     this.collapsed = collapsed;
-  }
+  };
 
   @action
   setOpenKeys = (openKeys: string[]) => {
     this.openKeys = openKeys;
-  }
-  
+  };
+
   @action
   setKeysByPath = (pathname: string) => {
     menus.forEach(parent => {
-      parent.children && parent.children.forEach(child => {
-        if (child.path === pathname) {
-          this.selectedKeys = [child.name];
-          this.openKeys = [parent.name];
-        }
-      });
+      parent.children &&
+        parent.children.forEach(child => {
+          if (child.path === pathname) {
+            this.selectedKeys = [child.name];
+            this.openKeys = [parent.name];
+          }
+        });
     });
-  }
+  };
 }
 
 export default new AppStore();

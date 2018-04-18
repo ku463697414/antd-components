@@ -5,7 +5,12 @@ import { RouterStore, SynchronizedHistory } from 'mobx-react-router';
 import { Layout, Icon } from 'antd';
 
 import menus from '../menus';
-import { AntdSiderbar, AntdHeader, AntdContent, AntdFooter } from '../components';
+import {
+  AntdSiderbar,
+  AntdHeader,
+  AntdContent,
+  AntdFooter
+} from '../components';
 import { AppStore } from '../app.store';
 
 export interface Props extends RouteComponentProps<{}> {
@@ -48,7 +53,7 @@ class BasicLayout extends React.Component<Props> {
           <AntdHeader />
           <AntdContent>
             <Switch>
-              {menus.map((v) => {
+              {menus.map(v => {
                 return v.children!.map((child, i) => (
                   <Route
                     key={i}
@@ -73,7 +78,9 @@ class BasicLayout extends React.Component<Props> {
                 }
               ]}
               copyright={
-                <div>Copyright <Icon type="copyright" /> 2018 中国制造</div>
+                <div>
+                  Copyright <Icon type="copyright" /> 2018 中国制造
+                </div>
               }
             />
           </AntdContent>

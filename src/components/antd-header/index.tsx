@@ -27,27 +27,27 @@ class AntdHeader extends React.Component<Props> {
     const { user, isMobile, collapsed, toggle } = this.appStore;
     const menu = (
       <Menu className={styles['menu']}>
-        <Menu.Item disabled><Icon type="user" />个人中心</Menu.Item>
-        <Menu.Item disabled><Icon type="setting" />设置</Menu.Item>
+        <Menu.Item disabled>
+          <Icon type="user" />个人中心
+        </Menu.Item>
+        <Menu.Item disabled>
+          <Icon type="setting" />设置
+        </Menu.Item>
         <Menu.Divider />
-        <Menu.Item key="logout"><Icon type="logout" />退出登录</Menu.Item>
+        <Menu.Item key="logout">
+          <Icon type="logout" />退出登录
+        </Menu.Item>
       </Menu>
     );
 
     return (
       <Layout.Header className={styles['header']}>
-        {isMobile && (
-          [
-            <Link
-              key="logo"
-              to="/" 
-              className={styles['logo']}
-            >
-              <img src={logo} />
-            </Link>,
-            <Divider key="line" type="vertical" />
-          ]
-        )}
+        {isMobile && [
+          <Link key="logo" to="/" className={styles['logo']}>
+            <img src={logo} />
+          </Link>,
+          <Divider key="line" type="vertical" />
+        ]}
         <Icon
           className={styles['trigger']}
           type={collapsed ? 'menu-unfold' : 'menu-fold'}
@@ -55,16 +55,27 @@ class AntdHeader extends React.Component<Props> {
         />
         <div className={styles['right']}>
           {user.name ? (
-              <Dropdown overlay={menu}>
-                <span className={`${styles['action']} ${styles['account']}`}>
-                  {user.avatar
-                    ? <Avatar size="small" className={styles['avatar']} src={user.avatar} />
-                    : <Avatar size="small" className={styles['avatar']} src={avatar} />
-                  }
-                  <span className={styles['name']}>{user.name}</span>
-                </span>
-              </Dropdown>
-            ) : <Spin size="small" style={{ marginLeft: 8 }} />}
+            <Dropdown overlay={menu}>
+              <span className={`${styles['action']} ${styles['account']}`}>
+                {user.avatar ? (
+                  <Avatar
+                    size="small"
+                    className={styles['avatar']}
+                    src={user.avatar}
+                  />
+                ) : (
+                  <Avatar
+                    size="small"
+                    className={styles['avatar']}
+                    src={avatar}
+                  />
+                )}
+                <span className={styles['name']}>{user.name}</span>
+              </span>
+            </Dropdown>
+          ) : (
+            <Spin size="small" style={{ marginLeft: 8 }} />
+          )}
         </div>
       </Layout.Header>
     );
