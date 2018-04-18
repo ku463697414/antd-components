@@ -92,7 +92,7 @@ class AntdSiderbar extends React.Component {
         <div className={styles['logo']}>
           <Link to="/">
             <img src={logo} alt="logo" />
-            <h1>罗盘管理系统</h1>
+            <h1>Antd组件库</h1>
           </Link>
         </div>
         <Menu
