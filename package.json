@@ -1,0 +1,76 @@
+{
+  "name": "luopan-components",
+  "version": "0.1.0",
+  "private": true,
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "files": [
+    "dist",
+    "es"
+  ],
+  "typings": "es/index.d.ts",
+  "scripts": {
+    "start": "PORT=3010 react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
+    "precommit": "lint-staged",
+    "analyze": "ANALYZE=1 npm build",
+    "tsc": "node build.js"
+  },
+  "dependencies": {
+    "@antv/data-set": "^0.8.3",
+    "antd": "3.2.0",
+    "bizcharts": "^3.1.0-beta.6",
+    "classnames": "^2.2.5",
+    "fastclick": "^1.0.6",
+    "g2": "^2.3.13",
+    "lodash-decorators": "^4.5.0",
+    "mobx": "^3.4.1",
+    "mobx-react": "^4.3.5",
+    "mobx-react-router": "^4.0.1",
+    "moment": "^2.20.1",
+    "numeral": "^2.0.6",
+    "qs": "^6.5.1",
+    "rc-drawer-menu": "^0.5.3",
+    "react": "^16.2.0",
+    "react-container-query": "^0.9.1",
+    "react-dom": "^16.2.0",
+    "react-fittext": "^1.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts-ts": "^2.8.0",
+    "stylelint-config-standard": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.3",
+    "@types/fastclick": "^1.0.28",
+    "@types/jest": "^21.1.10",
+    "@types/lodash-decorators": "^4.0.0",
+    "@types/node": "^8.5.2",
+    "@types/numeral": "^0.0.22",
+    "@types/qs": "^6.5.1",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-hot-loader": "^3.0.5",
+    "@types/react-router-dom": "^4.2.3",
+    "@types/webpack-env": "^1.13.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "node-sass": "^4.7.2",
+    "prettier": "^1.9.2",
+    "react-app-rewire-less": "^2.1.0",
+    "react-app-rewired": "^1.4.0",
+    "react-hot-loader": "^3.1.3",
+    "sass-loader": "^6.0.6",
+    "stylelint": "^8.4.0",
+    "ts-import-plugin": "^1.4.3",
+    "webpack-bundle-analyzer": "^2.9.1"
+  },
+  "lint-staged": {
+    "{src,__{tests,mocks}__}/**/*.{ts,tsx}": [
+      "prettier --single-quote --tab-width 2 --write"
+    ],
+    "src/**/*.scss": [
+      "stylelint"
+    ]
+  }
+}
