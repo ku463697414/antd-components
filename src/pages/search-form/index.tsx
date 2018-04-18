@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { AntdOriginSearchForm } from '../../components';
+import { AntdSearchForm } from '../../components';
 
 class BasicForm extends React.Component {
   render() {
     return (
       <div>
-        <AntdOriginSearchForm />
+        <AntdSearchForm />
       </div>
     );
   }
