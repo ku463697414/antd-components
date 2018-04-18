@@ -20,7 +20,7 @@ dirs.forEach(dir => {
   isExist && process.execSync(`cp ${src} ${dist}`);
 });
 // 清除不需要的目录
-process.execSync('rm -rf es/Antd-header es/Antd-siderbar es/Antd-content assets/fonts assets/images');
+process.execSync('rm -rf es/antd-header es/antd-siderbar es/antd-content assets/fonts assets/images');
 deleteLines('./es/index.d.ts');
 deleteLines('./es/index.js');
 
