@@ -59,6 +59,11 @@ var menuData = [
         path: 'components',
         children: [
             {
+                name: '员工卡片',
+                path: 'user-card',
+                component: dynamicLoad(function () { return import('./pages/user-cards'); })
+            },
+            {
                 name: '搜索表单',
                 path: 'search-form',
                 component: dynamicLoad(function () { return import('./pages/search-form'); })
@@ -67,11 +72,6 @@ var menuData = [
                 name: '模态框',
                 path: 'modal',
                 component: dynamicLoad(function () { return import('./pages/modal'); })
-            },
-            {
-                name: '员工卡片',
-                path: 'user-card',
-                component: dynamicLoad(function () { return import('./pages/user-cards'); })
             }
         ]
     }

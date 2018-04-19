@@ -53,7 +53,11 @@ var AntdUserCards = /** @class */ (function (_super) {
                 React.createElement(Tooltip, { key: "uc1", placement: "bottom", title: "删除" }, _this.props.onDelete && (React.createElement(Popconfirm, { title: '确定删除 ？', onConfirm: function () { return _this.handleDelete(v.userId); } },
                     React.createElement(Icon, { type: "delete", className: style['user_delete'] }))))));
         });
-        return (React.createElement(Card, { style: { borderRadius: '5px', width: cardWidth }, hoverable: true, type: 'inner' }, cardContent));
+        return (React.createElement(Card, { style: {
+                borderRadius: '5px',
+                width: cardWidth,
+                display: 'inline-block'
+            }, hoverable: true, type: 'inner' }, cardContent));
     };
     return AntdUserCards;
 }(React.Component));

@@ -95,7 +95,11 @@ class AntdUserCards extends React.Component<Props> {
 
     return (
       <Card
-        style={{ borderRadius: '5px', width: cardWidth }}
+        style={{
+          borderRadius: '5px',
+          width: cardWidth,
+          display: 'inline-block'
+        }}
         hoverable
         type={'inner'}
       >

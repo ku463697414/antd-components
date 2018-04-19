@@ -12,7 +12,19 @@ class UserCards extends React.Component {
         gender: '1',
         face: require('../../assets/images/avatar.png'),
         userId: 1,
-        userName: '黄大大'
+        username: '黄大大'
+      },
+      {
+        gender: '0',
+        face: require('../../assets/images/avatar.png'),
+        userId: 2,
+        username: '黄大大'
+      },
+      {
+        gender: '2',
+        face: require('../../assets/images/avatar.png'),
+        userId: 3,
+        username: '黄大大'
       }
     ];
 
@@ -40,13 +52,18 @@ class UserCards extends React.Component {
 
     return (
       <div>
-        <AntdUserCards
-          dataSource={datasource}
-          onDelete={this.handalDelete}
-          onEdit={this.handalEdit}
-          userMsg={userMsg}
-          cardWidth={'25%'}
-        />
+        {datasource.map(v => {
+          return (
+            <AntdUserCards
+              key={v.userId}
+              dataSource={[v]}
+              onDelete={this.handalDelete}
+              onEdit={this.handalEdit}
+              userMsg={userMsg}
+              cardWidth={'25%'}
+            />
+          );
+        })}
       </div>
     );
   }
