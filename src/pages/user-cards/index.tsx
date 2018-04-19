@@ -10,7 +10,7 @@ class UserCards extends React.Component {
     const datasource = [
       {
         gender: '1',
-        face: '',
+        face: require('../../assets/images/avatar.png'),
         userId: 1,
         userName: '黄大大'
       }

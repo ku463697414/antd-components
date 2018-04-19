@@ -42,9 +42,7 @@ var AntdUserCards = /** @class */ (function (_super) {
                     React.createElement("span", null, v.gender === '1' ? '男' : v.gender === '2' ? '女' : '无')),
                 React.createElement(Row, null,
                     React.createElement(Col, { md: 24, className: style['user_card'] },
-                        React.createElement("img", { alt: "example", src: v.face
-                                ? "/file/" + v.face
-                                : require('../../assets/images/avatar.png'), style: {
+                        React.createElement("img", { alt: "example", src: v.face, style: {
                                 width: '90px',
                                 height: '90px',
                                 borderRadius: '90px'

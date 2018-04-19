@@ -56,11 +56,7 @@ class AntdUserCards extends React.Component<Props> {
             <Col md={24} className={style['user_card']}>
               <img
                 alt="example"
-                src={
-                  v.face
-                    ? `/file/${v.face}`
-                    : require('../../assets/images/avatar.png')
-                }
+                src={v.face}
                 style={{
                   width: '90px',
                   height: '90px',
