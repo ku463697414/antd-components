@@ -37,9 +37,9 @@ export interface Props {
 const autoHeight = (WrappedComponent: React.ComponentClass<any>) => {
   // tslint:disable-next-line:no-any
   return class extends React.Component<any> {
-    root: Element|null;
+    root: Element | null;
     state = {
-      computedHeight: 0,
+      computedHeight: 0
     };
 
     componentDidMount() {
@@ -50,7 +50,7 @@ const autoHeight = (WrappedComponent: React.ComponentClass<any>) => {
       }
     }
 
-    handleRoot = (node: Element|null) => {
+    handleRoot = (node: Element | null) => {
       this.root = node;
     };
 
@@ -59,7 +59,9 @@ const autoHeight = (WrappedComponent: React.ComponentClass<any>) => {
       const { computedHeight } = this.state;
       const h = height || computedHeight;
       return (
-        <div ref={this.handleRoot}>{h > 0 && <WrappedComponent {...this.props} height={h} />}</div>
+        <div ref={this.handleRoot}>
+          {h > 0 && <WrappedComponent {...this.props} height={h} />}
+        </div>
       );
     }
   };

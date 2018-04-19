@@ -23,7 +23,7 @@ import * as moment from 'moment';
 var style = {
     searchForm: {
         padding: '14px 24px 0 24px',
-        background: '#fbfbfb',
+        background: '#fff',
         border: '1px solid #d9d9d9',
         borderRadius: '6px',
         marginBottom: '14px'

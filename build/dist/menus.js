@@ -56,12 +56,17 @@ var menuData = [
     {
         name: '基本组件',
         icon: 'form',
-        path: 'form',
+        path: 'components',
         children: [
             {
                 name: '搜索表单',
                 path: 'search-form',
                 component: dynamicLoad(function () { return import('./pages/search-form'); })
+            },
+            {
+                name: '模态框',
+                path: 'modal',
+                component: dynamicLoad(function () { return import('./pages/modal'); })
             }
         ]
     }

@@ -14,7 +14,7 @@ class App extends React.Component {
     const browserHistory = createBrowserHistory();
     const routerStore = new RouterStore();
     const history = syncHistoryWithStore(browserHistory, routerStore);
-    
+
     return (
       <LocaleProvider locale={zhCN}>
         <Router history={history}>

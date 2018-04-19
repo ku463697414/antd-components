@@ -15,7 +15,8 @@
     "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
     "precommit": "lint-staged",
     "analyze": "ANALYZE=1 npm build",
-    "tsc": "node build.js"
+    "tsc": "node build.js",
+    "formatter": "prettier --single-quote --tab-width 2 --write \"{src,__{tests,mocks}__}/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@antv/data-set": "^0.8.3",

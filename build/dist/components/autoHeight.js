@@ -48,7 +48,7 @@ var autoHeight = function (WrappedComponent) {
         function class_1() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
             _this.state = {
-                computedHeight: 0,
+                computedHeight: 0
             };
             _this.handleRoot = function (node) {
                 _this.root = node;
