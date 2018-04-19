@@ -18,7 +18,7 @@ export interface Props {
   onEdit?: (userId: number) => void;
 }
 
-class AntUserCards extends React.Component<Props> {
+class AntdUserCards extends React.Component<Props> {
   /**
    * 删除卡片
    */
@@ -109,4 +109,4 @@ class AntUserCards extends React.Component<Props> {
   }
 }
 
-export default AntUserCards;
+export default AntdUserCards;

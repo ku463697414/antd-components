@@ -14,7 +14,7 @@ export interface Props {
     onDelete?: (userId: number) => void;
     onEdit?: (userId: number) => void;
 }
-declare class AntUserCards extends React.Component<Props> {
+declare class AntdUserCards extends React.Component<Props> {
     /**
      * 删除卡片
      */
@@ -25,4 +25,4 @@ declare class AntUserCards extends React.Component<Props> {
     handleEdit: (userId: number) => void;
     render(): JSX.Element;
 }
-export default AntUserCards;
+export default AntdUserCards;

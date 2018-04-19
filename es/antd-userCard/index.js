@@ -11,9 +11,9 @@ var __extends = (this && this.__extends) || (function () {
 import * as React from 'react';
 import { Card, Icon, Row, Col, Tooltip, Popconfirm } from 'antd';
 var style = require('./index.scss');
-var AntUserCards = /** @class */ (function (_super) {
-    __extends(AntUserCards, _super);
-    function AntUserCards() {
+var AntdUserCards = /** @class */ (function (_super) {
+    __extends(AntdUserCards, _super);
+    function AntdUserCards() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         /**
          * 删除卡片
@@ -29,7 +29,7 @@ var AntUserCards = /** @class */ (function (_super) {
         };
         return _this;
     }
-    AntUserCards.prototype.render = function () {
+    AntdUserCards.prototype.render = function () {
         var _this = this;
         var _a = this.props, dataSource = _a.dataSource, userMsg = _a.userMsg, cardWidth = _a.cardWidth;
         var cardContent = dataSource.map(function (v) {
@@ -57,7 +57,7 @@ var AntUserCards = /** @class */ (function (_super) {
         });
         return (React.createElement(Card, { style: { borderRadius: '5px', width: cardWidth }, hoverable: true, type: 'inner' }, cardContent));
     };
-    return AntUserCards;
+    return AntdUserCards;
 }(React.Component));
-export default AntUserCards;
+export default AntdUserCards;
 //# sourceMappingURL=index.js.map
