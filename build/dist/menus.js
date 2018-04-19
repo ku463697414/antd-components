@@ -67,6 +67,11 @@ var menuData = [
                 name: '模态框',
                 path: 'modal',
                 component: dynamicLoad(function () { return import('./pages/modal'); })
+            },
+            {
+                name: '员工卡片',
+                path: 'user-card',
+                component: dynamicLoad(function () { return import('./pages/user-cards'); })
             }
         ]
     }

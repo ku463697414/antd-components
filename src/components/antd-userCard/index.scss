@@ -1,0 +1,57 @@
+.user_card {
+  text-align: center;
+}
+.user_icon {
+  display: block;
+  color: rgb(52, 153, 251);
+  width: 30px;
+  height: 30px;
+  border-radius: 22px;
+  line-height: 30px;
+  text-align: center;
+  position: inherit;
+  bottom: 10px;
+  margin: 0 auto;
+  background: #fff;
+  opacity: .8;
+  font-size: 15px;
+  border: 1px dotted rgb(52, 153, 251);
+}
+.user_msg p {
+  color: #979797;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.user_list .ant-list-item-content {
+  width: 100%;
+}
+.user_delete {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 3px;
+  padding: 3px;
+  border: 1px solid #bfbfbf;
+  color: #8c8c8c;
+  display: block;
+}
+.user_search .ant-form-horizontal {
+  background: #fff !important;
+}
+.user_gender {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  opacity: 0.8;
+  span {
+    position: absolute;
+    right: 12px;
+    bottom: 30px;
+    font-size: 17px;
+  }
+}
