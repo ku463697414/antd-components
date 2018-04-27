@@ -161,7 +161,6 @@ export class AntdOriginSearchForm extends React.Component<Props> {
 
   render() {
     const { fields } = this.props;
-
     return (
       <Form
         layout="horizontal"
