@@ -32,7 +32,7 @@ export class AntdOriginModalForm extends React.Component<Props> {
     return (
       <Form.Item
         key={Array.isArray(key) ? key[2] : key}
-        labelCol={{ span: 6 }}
+        labelCol={{ span: 4 }}
         wrapperCol={{ span: 18 }}
         {...rest}
       >
