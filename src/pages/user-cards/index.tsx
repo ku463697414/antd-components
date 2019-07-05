@@ -27,7 +27,6 @@ class UserCards extends React.Component {
         username: '黄大大'
       }
     ];
-
     const userMsg = (
       <div>
         <p>

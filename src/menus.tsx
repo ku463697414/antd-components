@@ -20,6 +20,11 @@ const menuData: MenuData[] = [
         name: '模态框',
         path: 'modal',
         component: dynamicLoad(() => import('./pages/modal'))
+      },
+      {
+        name: '库卡片',
+        path: 'lab-card',
+        component: dynamicLoad(() => import('./pages/lab-cards'))
       }
     ]
   }

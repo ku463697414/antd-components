@@ -1,0 +1,25 @@
+//将personLab描述与头像分隔
+.LabcardM-B {
+  margin-bottom: 10px;
+}
+//头像右边距
+.Avatar {
+  margin-right: 5px;
+}
+//设置图片头像和perspnLab卡片描述不可换行
+.personCardItemS {
+  color: #979797;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//设置personLab卡片内容的高度
+:global {
+  .ant-card-body {
+    height: 150px;
+  }
+  //限定所有的cardlist不超出边界
+  .ant-list-item-content {
+    width: 100%;
+  }
+}
